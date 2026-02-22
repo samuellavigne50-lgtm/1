@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoBank 17 </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone">
+
+<!-- Dynamic Island -->
+<div class="dynamic-island" id="island">
+    <span id="islandText">🔒 Système sécurisé</span>
+</div>
+
+<div class="screen" id="screen">
+
+<!-- LOGIN SIMPLE -->
+<div id="login">
+    <h2>Connexion</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="login()">Se connecter</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden">
+
+<h2>NeoBank Premium</h2>
+
+<!-- CARTE FLOTTANTE 3D -->
+<div class="floating-card">
+    <div class="card-3d">
+        <div class="card-front">
+            <p>Carte Premium</p>
+            <div class="card-number">4587 9923 7744 1208</div>
+        </div>
+    </div>
+</div>
+
+<div class="balance">720000 €</div>
+<div class="blocked">Compte bloqué – Dette non remboursée.</div>
+
+<!-- SELECTEUR MOIS -->
+<select id="monthSelector" onchange="updateChart()">
+    <option value="0">Janvier</option>
+    <option value="1">Février</option>
+    <option value="2">Mars</option>
+    <option value="3">Avril</option>
+    <option value="4">Mai</option>
+    <option value="5">Juin</option>
+</select>
+
+<canvas id="chart"></canvas>
+
+<button class="apple-pay-btn" onclick="applePay()"> Pay</button>
+
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
